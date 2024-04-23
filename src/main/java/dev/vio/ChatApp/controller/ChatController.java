@@ -34,7 +34,6 @@ public class ChatController {
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
 
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
-        String haiDinamo = "Hai Dinamo!";
         return chatMessage;
     }
 
